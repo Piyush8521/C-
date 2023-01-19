@@ -1,0 +1,507 @@
+using System;
+using System.Linq;
+using System.ComponentModel;
+using System.Numerics;
+using static System.Net.Mime.MediaTypeNames;
+using System.Dynamic;
+
+class Program
+{
+    class car
+    {
+        string color = "red";
+        int price = 50000;
+        string model = "V40";
+        float mileage = 25.5f;
+        class student
+        {
+            public string name = "Piyush";
+            string dep = "MCA";
+            int rollno = 43;
+            string year = "2021 - 2023";
+        //}   
+
+            //Method for SUM
+            static void SUM()
+            {
+                Console.Write("Enter 1st no : ");
+                int a = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter 2nd no : ");
+                int b = Convert.ToInt32(Console.ReadLine());
+                int sum = a + b;
+                Console.WriteLine("Sum of given number is : " + sum);
+
+
+            }
+            //Method for Parameters
+            static void STRING(string fname, int age)
+            {
+
+                Console.Write("Name : " + fname + " Kumar ** " + "Age : " + age);
+            }
+
+            //Method for returning a value using int
+
+            static int RETURN(int a)
+
+            {
+                return 12 + a;
+            }
+
+            //Method Overloading
+
+            static int MEOV(int a, int b)
+            {
+                return a + b;
+            }
+            static double MEOV(double a, double b)
+            {
+                return a + b;
+            }
+
+            static void Main()
+
+            {
+                Console.WriteLine("Welcome to c#");
+
+            /* Program for simple calculation
+
+            string name = "Program for simple calculation";
+            Console.WriteLine(name);
+            Console.WriteLine("For A = 10 and B = 2 ");
+            int a = 10;
+            int b = 2;
+            int z = a + b;
+            int y = a / b;
+            int x = a % b;
+            int w = a * b;
+            int v = a - b;
+            Console.WriteLine("A + B = " + z);
+            Console.WriteLine("A / B = " + y);
+            Console.WriteLine("A % B = " + x);
+            Console.WriteLine("A * B = " + w);
+            Console.WriteLine("A - B = " + v);
+            */
+
+
+            /*Program for conversion of DataType
+
+            int a = 5;
+            //double d = 5.00005d;
+            Console.WriteLine(Convert.ToDouble(a));
+
+            */
+
+            /*Addition of two numbers by taking user input
+
+            Console.WriteLine("Enter a : ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ener b : ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int result = a + b;//Console.WriteLine((a+b) + ToString); ;
+            //int result = Console.WriteLine("Result = " + (a + b));
+            Console.WriteLine("Total = " + result);
+            */
+
+            //Math Functions
+
+            /*To find min of two numbers
+
+            int a = 16;
+            int b = 8;
+
+            Console.WriteLine(Math.Min(a , b));
+
+            */
+
+            /*To find max of two numbers
+
+            int a = 16;
+            int b = 4;
+
+            Console.WriteLine(Math.Max(a, b));
+
+            */
+
+            /*To find sqrt of a number
+
+            int a = 81;
+            Console.WriteLine(Math.Sqrt(a));
+
+            */
+
+            /*To obtain positive value of any number
+
+            float f = -8.3f;
+            Console.WriteLine(Math.Abs(f));
+
+            */
+
+            /*To obtain round value of a number
+
+            float f = 8.56f;
+            Console.WriteLine(Math.Round(f));
+
+            */
+
+            /* Length of String
+
+            string str = "My name is Piyush";
+            Console.WriteLine("The  length of string is : " + str.Length);
+
+            */
+
+            /*Convert a string to lower case
+
+            string str = "MY NAME IS PIYUSH";
+            Console.WriteLine(str.ToLower());
+
+            */
+            /*Convert a string to upper case
+
+            string str = "my name is piyush";
+            Console.WriteLine(str.ToUpper());
+
+            */
+
+            //Concatenation
+
+            /*string concatenation
+
+            string fname = "Piyush";
+            string lname = "Kumar";
+            string name = String.Concat(fname + " ", lname);
+            Console.WriteLine(name);
+
+            */
+
+            /*string interpolation
+
+            string fname = "Piyush";
+            string lname = "Kumar";
+            string name = $"My full name is {fname + " "}{lname}";
+            Console.WriteLine(name);
+
+            */
+
+            /*Access a particular letter in a string
+
+            string fname = "Piyush";
+            Console.WriteLine(fname[4]);
+
+            */
+
+            /*Program to find index of a letter in a word
+
+            string fname = "Piyush";
+
+            Console.WriteLine(fname.IndexOf("h"));
+
+            */
+
+            /*Use of substring
+
+            string name = "Piyush Kumar";
+            int charpos = name.IndexOf('K');
+            string lname = name.Substring(charpos);
+            Console.WriteLine(lname); 
+
+            */
+
+            /*Booleans
+
+            bool Good = true;
+            bool Bad = false;
+            Console.WriteLine(Good);
+            Console.WriteLine(Bad);
+
+
+            int a = 5;
+            int b = 10;
+            Console.WriteLine(a > b);
+            Console.WriteLine(a < b);
+
+             */
+
+            //*******************************************************************************************
+
+
+            //If Else
+            /*
+
+            Console.WriteLine("Enter age : ");
+            double age = Convert.ToDouble(Console.ReadLine());
+            if (age >= 18)
+            {
+                Console.WriteLine("Eligible for Voting");
+            }
+            else
+            {
+                Console.WriteLine("Not Eligible for Voting");
+            }
+            */
+
+            //If else if
+
+            /*
+            Console.WriteLine("Program to check a number is even or odd");
+            Console.WriteLine("Enter number");
+            double a = Convert.ToDouble(Console.ReadLine());
+            if (a %2 == 0)
+            {
+                Console.WriteLine("Even Number");
+
+            }else if(a %2 == 1)
+            {
+                Console.WriteLine("Odd Number");
+            }
+            else
+            {
+                Console.WriteLine("Input Correct Number");
+            }
+            */
+
+            //Short hand if
+
+            /*
+            Console.WriteLine("Enter number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            string number = (a % 2 == 0) ? "even" : "odd" ;
+            Console.WriteLine(number);
+
+            */
+
+            //Use of SWITCH Case
+
+            /*
+            Console.WriteLine("Program to check weekdays \n");
+            Console.WriteLine("Enter number");
+            int a = Convert.ToInt32(Console.ReadLine());
+            switch(a)
+            {
+                case 1:
+                    Console.WriteLine(a + "st day of week is Monday");
+                    break;
+                case 2:
+                    Console.WriteLine(a + "nd day of week is Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine(a + "rd day of week is Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine(a + "th day of week is Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine(a + "th day of week is Friday");
+                    break;
+                case 6:
+                    Console.WriteLine(a + "th day of week is Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine(a + "th day of week is Sunday");
+                    break;
+                default:
+                    Console.WriteLine("Invalid");
+                    break;
+
+            */
+
+            //While Loop
+            /*
+            Console.WriteLine("Enter number : ");
+            int a = 0;
+            while (a < 5 ) 
+            {
+                Console.WriteLine(a);
+                a++;
+            }
+            */
+
+            //do While Loop
+
+            /*
+            int a = 5;
+            do
+            {
+                Console.WriteLine(a);
+                a--;
+            } while (a > 0);
+            */
+
+            //For Loop
+
+            /*Write a program in C to display the cube of the number upto given an integer. Go to the editor
+
+                Data :
+            Input number of terms : 5
+            Expected Output :
+            Number is : 1 and cube of the 1 is :1
+            Number is : 2 and cube of the 2 is :8
+            Number is : 3 and cube of the 3 is :27
+            Number is : 4 and cube of the 4 is :64
+            Number is : 5 and cube of the 5 is :125
+            */
+            /*Console.WriteLine("Input number : ");
+            for(int i = 1 ; i <= 5 ; i++)
+            {
+                Console.WriteLine("Number is : " + i + " and cube of the " + i + " is :" + i * i * i);
+            }
+            */
+
+            //Program to print stars
+
+            /*  *****
+                ****
+                ***
+                **
+                *
+             */
+
+            /*
+            for(int i = 0 ; i <= 5; i++)
+            {
+                {
+                    for (int j = 5; j > i; j--)
+                        Console.Write("*");
+
+                }
+                Console.WriteLine();
+            }
+            */
+
+            /*For each Loop
+
+            string[] bikes = { "Honda", "Hero", "Yamaha" };
+            foreach (string i in bikes)
+            {
+                Console.WriteLine(i);
+            }
+
+            */
+            //Loops in array 
+            /*
+
+            string[] books = { "c","C#","C++"};
+            for(int i = 0; i < books.Length; i++)
+            {
+                Console.WriteLine(books[i]);   
+            }
+            */
+
+            //Sorting in arrays
+
+            /*Sorting in string
+
+            string[] bikes = { "Honda" ,"Hero","Yamaha","kawasaki"};
+            Array.Sort(bikes);
+            foreach (string i in bikes)
+            {
+                Console.WriteLine(i);
+            }
+            */
+
+            /*sorting in int
+
+            int[] num = { 10, 13, 2, 8, 1, 6, 54, 0 };
+            Array.Sort(num);
+            foreach (int i in num)
+            {
+                Console.WriteLine(i);
+            }
+            */
+            /*Program to sort given no in array
+
+            int[] no = { 6, 2, 88, 33, 49, 21, 1, 10, 23, 25 };
+            Array.Sort(no);
+            foreach(int n in no)
+            {
+                Console.Write("  " +n);
+            }
+            */
+
+            //Use of System.Linq
+
+            /*
+             * 
+            int[] num = { 1, 2, 3, 10 };
+            Console.WriteLine(num.Max());
+            Console.WriteLine(num.Min());
+            //Console.WriteLine(num.ToString());
+            Console.WriteLine(num.Sum());
+
+             */
+
+            //Two Dimensional array
+
+            /*
+            int[,] num = { { 1, 2, 3 }, { 4, 5, 6 } };// { 7 , 8 ,9} };
+            Console.WriteLine(num[1,0]);
+
+            */
+
+            //Use of for loop in 2D array
+
+            /*int[,] num = { { 1, 2, 3 }, { 4, 5, 6 } };
+            for (int i = 0; i <= num.GetLength(0); i++) 
+            { 
+                for (int j =0; j <= num.GetLength(0); j++)
+                {
+                    Console.WriteLine(num[i, j]);
+                }
+            }
+            */
+            /*###########################################################################################*/
+
+
+            //Methods in C#
+
+            //SUM();
+            //STRING("Piyush ", 23);
+            //Console.WriteLine(RETURN("Value : " + 5));
+
+            //Method Overloading
+
+            //Console.WriteLine(MEOV(5, 10));
+            //Console.WriteLine(MEOV(4.5,5.5));
+
+
+            /****************************************************************************************/
+
+
+            // Classes and Objects
+
+            /*
+            Console.WriteLine("******Car Specs******");
+            car obj = new car();
+            Console.WriteLine("Color : " + obj.color);
+            //car price = new car();
+            Console.WriteLine("Price : " + obj.price);
+            //car model = new car();
+            Console.WriteLine("Model : " + obj.model);
+            //car mileage = new car();
+            Console.WriteLine("Mileage : " + obj.mileage + "Km/Pl");
+
+            */
+
+            /*
+
+            student obj = new student();
+            Console.WriteLine("Student Name : " + obj.name);
+            Console.WriteLine("Department : " + obj.dep);
+            Console.WriteLine("Roll no : " + obj.rollno);
+            Console.WriteLine("Year : " + obj.year);
+
+            */
+
+            //Checking Public Class
+
+            /*
+            student obj = new student();
+            Console.WriteLine(obj.name);
+
+            */
+
+            }
+        }
+    }
+}
