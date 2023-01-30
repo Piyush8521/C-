@@ -1,0 +1,327 @@
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SeleniumTesting
+{
+    
+    internal class Program
+    {
+        
+        static void Main(string[] args)
+        {
+        }
+        IWebDriver driver = new ChromeDriver();
+        /*[SetUp]
+        public void initialize()
+        {
+            driver.Navigate().GoToUrl("https://flocard.app/");
+            driver.Navigate().GoToUrl("https://flocard.app/Login");
+        
+        }
+
+        [Test]
+
+        */
+        /////////Upper Tags
+
+        /*public void FloCradLogo()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id='logoAndNav']/nav/div/a/img"));
+            element.Click();
+        }
+        */
+        /*public void ImpactingSDGs()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id='navBar]/div/ul/li[1]/a)"));
+        }
+        */
+        /*public void IntegratedSolutions()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id=\'navBar\']/div/ul/li[2]/a"));
+        }
+        */
+        /*public void KnowledgeBank()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id=\'navBar\']/div/ul/li[3]/a"));
+        }
+        */
+        /*public void ContactUs()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id=\'navBar\'/div/ul/li[4]/a"));
+        }*/
+        /*public void AboutUs()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id=\'navBar\']/div/ul/li[4]/a"));
+        }*/
+        /*public void BecomeaPlanter()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id=\'navBar\']/div/ul/li[6]/a"));
+        }*/
+        /*public void GetStarted()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id='logoAndNav']/nav/div/div[1]/a"));
+        }
+        */
+        /*public void CreateFloCard()
+        {
+            IWebElement element = driver.FindElement(By.XPath("//*[@id='content']/div/div/div/a"));
+        }*/
+
+        /////////Lower Tags
+
+        /*public void ImpactingSDGs()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[1]/ul/li[1]/a"));
+        }
+        */
+        /*public void IntegratedSolutions()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[1]/ul/li[2]/a"));
+        }
+        
+        /*public void KnowledgeBank()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[1]/ul/li[3]/a"));
+        }
+        */
+        /*public void ContactUs()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[3]/ul/li[3]/a"));
+        }*/
+        /*public void AboutUs()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[3]/ul/li[1]/a"));
+        }*/
+        /*public void BecomeaPlanter()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[1]/ul/li[4]/a"));
+        }*/
+        /*public void Newsletters()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[2]/ul/li[1]/a"));
+        }
+        */
+        /*public void Blog()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[2]/ul/li[2]/a"));
+        }*/
+        /*public void PrivacyPolicy()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[2]/ul/li[3]/a"));
+        }
+        */
+        /*public void Disclaimer()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[2]/ul/li[4]/a"));
+        }*/
+        /*public void FAQ()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[2]/div/div[3]/ul/li[2]/a"));
+        }*/
+
+        //////Social Media Handles
+
+
+        /*public void Facebook()
+       {
+           IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[3]/ul/li[1]/a/i"));
+       }
+       */
+        /*public void Mail()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[3]/ul/li[2]/a"));
+        }
+        */
+        /*public void Twitter()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[3]/ul/li[3]/a"));
+        }
+        */
+        /*public void Instagram()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[3]/ul/li[4]/a/i"));
+        }
+        */
+        /*public void LinkedIn()
+        {
+            IWebElement element = driver.FindElement(By.XPath("/html/body/footer/div/div[1]/div[3]/ul/li[5]/a/i"));
+        }*/
+
+        //////////After Login
+        ///
+
+        [SetUp]
+        public void GetStarted()
+        {
+            
+            driver.Navigate().GoToUrl("https://flocard.app/");
+            IWebElement GetStarted = driver.FindElement(By.XPath("//*[@id='logoAndNav']/nav/div/div[1]/a"));
+            GetStarted.Click();
+            driver.Manage().Window.Maximize();
+           
+
+        }
+        [Test]
+        public void Loginprocess()
+        {
+            
+            //IWebElement GetStarted = driver.FindElement(By.XPath("//*[@id='logoAndNav']/nav/div/div[1]/a"));
+            //GetStarted.Click();
+
+            IWebElement LinkedIn = driver.FindElement(By.XPath("//*[@id=\'content\']/div[2]/div/div/div/div/form/div/a[2]/span"));
+            LinkedIn.Click();
+        
+            IWebElement Email = driver.FindElement(By.XPath("//*[@id=\'username\']"));
+            Email.SendKeys("piyushmarch26@gmail.com");
+       
+        
+            IWebElement Password = driver.FindElement(By.XPath("//*[@id=\'password\']"));
+            Password.SendKeys("Piyush8521@");
+       
+        
+            IWebElement SignIn = driver.FindElement(By.XPath("//*[@id=\'app__container\']/main/div[2]/form/div[3]/button"));
+            SignIn.Click();
+
+            IWebElement support = driver.FindElement(By.XPath("//*[@id=\'lnkSupport\']/span"));
+            support.Click();
+
+            IWebElement Name = driver.FindElement(By.XPath("//*[@id=\'NameLabel\']"));
+            Name.SendKeys("Piyush Kumar");
+
+            IWebElement Emaill = driver.FindElement(By.XPath("//*[@id=\'EmailLabel\']"));
+            Emaill.SendKeys("piyushmarch26@gmail.com");
+
+            IWebElement Contact = driver.FindElement(By.XPath("//*[@id=\'ContactLabel\']"));
+            Contact.SendKeys("8521960272");
+
+            IWebElement Description = driver.FindElement(By.XPath("//*[@id=\'message\']"));
+            Description.SendKeys("I am feelng glad to be here");
+
+            IWebElement Submit = driver.FindElement(By.XPath("//*[@id=\'content\']/div[1]/section/div/div[2]/div[1]/div/div[2]/form/div[4]/button"));
+            Submit.Click();
+            }
+
+
+            /*public void MyCards()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkMycards']/span"));
+            }
+            */
+            /*public void Exchange()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='exchangemenu']/a/span"));
+            }
+            */
+            /*public void My Contacts()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkContacts']/span"));
+            }
+            */
+            /*public void MyFlocCardID()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkAddress']/span"));
+            }
+            */
+            /*public void PlantersApp()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkPlanter']/span"));
+            }*/
+            /*public void FAQS()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkFAQ']/span"));
+            }*/
+            /*public void FlocardPolicies()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkPolicies']/span"));
+            }*/
+            /*
+            public void Support()
+           {
+               IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkSupport']/span"));
+           }*/
+            /*public void FlocardGuide()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkGuide']/a/span"));
+            }*/
+
+
+            ////////////Under Exchange
+
+            /*public void ExchangeCodes()
+          {
+              IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkExchangeCodes']/span[2]"));
+          }*/
+            /*public void ReceiveExchangeCode()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='lnkExchangeReceive"]/span[2]'));
+            }*/
+
+            ///////////////Under FloCard Guide
+
+            /*public void CreatenewCard()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='newCardIntro']/span[2]"));
+                element.Click();
+            }
+            */
+            /*public void EditCard()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='editCardIntro']/span[2]"));
+            }
+            */
+            /*public void ExchangeFloCard()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='exchangeIntro']/span[2]"));
+            }
+            */
+            /*public void ClaimAlias()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='aliasIntro']/span[2]"));
+            }
+            */
+            /*public void Addtags()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='tagsIntro]/span[2]"));
+            }
+            */
+
+            ///////////////////Menu Options Under FloCard
+
+
+            /*public void Edit()
+           {
+               IWebElement element = driver.FindElement(By.XPath("//*[@id='connectionsDropdown1']/div/a"));
+           }
+           */
+            /*public void SetCardasDefault()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='def1']"));
+            }
+            */
+            /*public void AttachtoOrganization()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='connectionsDropdown1']/a[5]"));
+            }
+            */
+
+            ///////////////Create Another Business Card
+
+            /*public void Create Another Business Card()
+            {
+                IWebElement element = driver.FindElement(By.XPath("//*[@id='new_card_id']/div/div[1]/a/img"));
+            }
+            */
+
+        /*[TearDown]
+        public void close()
+        {
+            driver.Close();
+        }*/
+    }
+}
